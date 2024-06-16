@@ -26,11 +26,9 @@ public class VentasEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-
     @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "venta_id")
     private List<ProductoEntity> productosVendidos;
-
     private double total;
 
 }
